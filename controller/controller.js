@@ -1,10 +1,7 @@
 function logInOrg(callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", 'https://mindicador.cl/api', true); // true for asynchronous 
-    xmlHttp.send(null);
+    let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+    let response = await fetch(url);
+    let commits = await response.json(); // read response body and parse as JSON
+    alert(commits[0].author.login);
 }
 
