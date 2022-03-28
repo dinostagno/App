@@ -1,4 +1,4 @@
-function logInOrg(theUrl, callback) {
+function logInOrg(callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
