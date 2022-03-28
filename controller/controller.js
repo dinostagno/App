@@ -1,10 +1,10 @@
-function logInOrg() {
-    const Http = new XMLHttpRequest();
-    const url = 'https://jsonplaceholder.typicode.com/posts';
-    Http.open("GET", url);
-    Http.send();
-
-    Http.onreadystatechange = (e) => {
-        console.log(Http.responseText)
+function logInOrg(theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
     }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
 }
+
