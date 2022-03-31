@@ -37,8 +37,7 @@ function getValues() {
 
         })
         .then(function(response) {
-            console.log('response =', response);
-            return response.json();
+            console.log('response =', response.json();
         })
         .then(function(data) {
             console.log('data = ', data);
