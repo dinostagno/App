@@ -3,7 +3,7 @@ function getValues() {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 00D2E000000mpVn!ARIAQIBNvPOAxQMeDu6yC_ovxUjqYMkli_h34KOfuoJ69Nbxmctyh5orgmF4UhUK9yqHJjFsnrrvJFZWVFRjsJXjUpPfQQ7t'
+      'Authorization': 'Bearer 00D2E000000mpVn!ARIAQLsE6bWjWJUgOs1PxuXaj3CUZsh6wXj2tEZ_VLZ0ime7lHkhf7FXunOoDwV0CTSRR5aEPWxUDl31iQVFNcfgKuk9ST2r'
     },
 
   })
