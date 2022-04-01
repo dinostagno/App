@@ -43,7 +43,15 @@
 }*/
 var urlReplace;
 const getValues = () => {
-     urlReplace = window.location.assign('https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/');    
+     urlReplace = window.location.assign('https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/');  
+     if (urlReplace == null){
+         urlReplace = null;
+     } else{
+         logUrl();
+     }
+}
+function logUrl() {
+  console.log(urlReplace);
 }
 //getValues().then((urlReplace) => console.log(urlReplace))
-console.log(urlReplace);
+
