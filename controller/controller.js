@@ -47,4 +47,4 @@ const getValues = () => {
     resolve(urlReplace);  
     })
 }
-getValues().then((urlReplace) => console.log(resolve))
+getValues().then((urlReplace) => console.log(urlReplace))
