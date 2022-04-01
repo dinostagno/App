@@ -47,14 +47,14 @@ function getValues() {
     var c = urlNew.searchParams.get("code");
     console.log(c);
     //let seachCode = url.searchParams.get('code');
-     if(name) {
+     /*if(name) {
         // Si se encontró, entonces ejecuta la función
         getUrlValues();
-    }
+    }*/
 }
-function getUrlValues() {
+/*function getUrlValues() {
     var url = window.location.href.startsWith('?code=');
     console.log(url);
     var urlvalue = window.location.href;
     console.log(urlvalue);
-}
+}*/
