@@ -42,7 +42,7 @@
         });
 }*/
 function getValues() {
-    let urlReplace = window.location.replace("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
+    let urlReplace = window.location.href("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
     var urlNew = new URL(urlReplace);
     var c = urlNew.searchParams.get("code");
     console.log(c);
