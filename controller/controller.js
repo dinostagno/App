@@ -22,7 +22,6 @@ function getValues() {
     fetch('https://login.salesforce.com/services/oauth2/token', {
             method: 'POST',
             headers: {
-                'Accept': 'application/json',
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Access-Control-Allow-Origin': '*'
             },
