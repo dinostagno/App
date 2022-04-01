@@ -18,7 +18,7 @@
     console.error(err);
   });
 }*/
-function getValues() {
+/*function getValues() {
     fetch('https://login.salesforce.com/services/oauth2/token', {
             method: 'POST',
             headers: {
@@ -40,4 +40,7 @@ function getValues() {
         .catch(function(err) {
             console.error(err);
         });
+}*/
+function getValues() {
+    window.location.replace("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
 }
