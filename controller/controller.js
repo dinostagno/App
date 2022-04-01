@@ -42,9 +42,10 @@
         });
 }*/
 function getValues() {
-    let url = window.location.replace("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
-    let params = new URLSearchParams(document.location.search);
-    let name = params.get("code");
+    let urlReplace = window.location.replace("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
+    var urlNew = new URL(url);
+    var c = urlNew.searchParams.get("code");
+    console.log(c);
     //let seachCode = url.searchParams.get('code');
      if(name) {
         // Si se encontró, entonces ejecuta la función
