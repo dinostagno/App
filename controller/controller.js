@@ -72,7 +72,7 @@ function getValues() {
             }
         })
         .then(response => response.json())
-        .then(json => console.log(json));
-    .catch(err => console.log(err));
+        .then(json => console.log(json))
+        .catch(err => console.log(err));
 }
 
