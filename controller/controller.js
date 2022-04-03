@@ -41,7 +41,7 @@
             console.error(err);
         });
 }*/
-const getValues = () => {
+/*const getValues = () => {
      var queryString = await window.location.replace("https://login.salesforce.com/services/oauth2/authorize?client_id=3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn&response_type=code&redirect_uri=https://dinostagno.github.io/App/");
      var urlParams = new URLSearchParams(queryString);
      var anuncioParam = urlParams.get('code');
@@ -53,6 +53,26 @@ function logUrl() {
   var urlParams = new URLSearchParams(queryString);
   var anuncioParam = urlParams.get('code');
   console.log(anuncioParam);
-}
+}*/
 //getValues().then((urlReplace) => console.log(urlReplace))
+function getValues() {
+    let _data = {
+        grant_type: "password",
+        client_id: "3MVG9ZF4bs_.MKuhz4g8P5ekGrXZkNs0a2sba0CwY.6lhSXpZM4H.CM6okSQmxTiF0DMhGyMza2a_E4zfHbKn",
+        client_secret: "5CC14D5C61AB61C49E16DE550455A03AFB12B578F88B32D548BD5585F5707E54",
+        username: "dpaolostagno@gmail.com",
+        password: "ArchBash@2022e4P0ast5TIaxNmQgo5r1hO0Mh"
+    }
+
+    fetch('https://login.salesforce.com/services/oauth2/token', {
+            method: "POST",
+            body: JSON.stringify(_data),
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded"
+            }
+        })
+        .then(response => response.json())
+        .then(json => console.log(json));
+    .catch(err => console.log(err));
+}
 
